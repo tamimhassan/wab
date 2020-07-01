@@ -5,6 +5,10 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	color: white;
+	text-decoration: none;
+}
 
 .home-page-section1 {
 	width: 100%;
