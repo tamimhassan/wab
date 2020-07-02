@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500&display=swap');
 
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
 a {
 	color: white;
 	text-decoration: none;
@@ -24,13 +30,15 @@ a:hover {
 	flex-direction: column;
 }
 
-nav {
-	height: 100px;
+nav,
+footer {
+	height: 140px;
 	align-items: center;
 	display: flex;
 }
 
-header {
+header,
+.footer-padding {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -41,7 +49,7 @@ header {
 	font-family: 'Playfair Display', serif;
 	font-weight: bold;
 	font-size: 30px;
-	letter-spacing: 10px;
+	letter-spacing: 12px;
 }
 
 .web-right-nav {
@@ -76,22 +84,31 @@ span.menu-icon img {
 }
 
 .web-middel-text {
-	background: transparent url(./image/illus.png) 0% 0% no-repeat padding-box;
-	background-position: center;
+	position: relative;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	background-size: contain;
+	align-items: center;
 	height: 100%;
 }
 
-.web-middel-text:before {
-	opacity: 0.3;
+.web-middel-text::before {
+	content: ' ';
+	background-image: url(./image/illus.png);
+	background-position: center;
+	width: 100%;
+	background-repeat: no-repeat;
+	display: block;
+	position: absolute;
+	z-index: 0;
+	background-size: contain;
+	height: 100%;
+	opacity: 0.8;
 }
 
 
 .middel-text {
 	width: 450px;
+	z-index: 2;
 	text-align: center;
 }
 
@@ -114,13 +131,13 @@ span.menu-icon img {
 }
 
 .web-down-nav .item {
-	height: 148px;
-	width: 150px;
+	height: 155px;
+	width: 155px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border: solid #3BD2C4;
+	border: solid rgba(67, 206, 193, 0.33);
 	border-width: 1px 1px 0px 0px;
 }
 
@@ -145,5 +162,27 @@ span.menu-icon img {
 }
 
 .web-down-nav .item-icon img {
-	width: 30px;
+	width: 40px;
+}
+
+
+/* ---------------------Footer------------------------- */
+
+.footer-padding {
+	font-family: poppins;
+	font-size: 15px;
+	color: #707070;
+}
+
+footer .web-name {
+	color: black;
+	margin-bottom: 14px;
+}
+
+.copyright-text {
+	opacity: 0.9;
+}
+
+.footer-icons img {
+	margin: 0px 8px;
 }
