@@ -1,2 +1,1 @@
-# wab
-some demo wap page
+One demo web page.
